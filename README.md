@@ -4,6 +4,10 @@ Reproduction of error when using the BladeView control (Windows Community Toolki
 
 To make the exception disappear, either remove the BladeView control from the MainPage.xaml file or change the TargetDeviceFamily back to Windows.Universal in the Package.appxmanifest file.
 
+Windows Community Toolkit issue: https://github.com/windows-toolkit/WindowsCommunityToolkit/issues/2948
+
+Originating StackOverflow question: https://stackoverflow.com/questions/56476709/uwp-using-windows-desktop-target-device-family-triggers-xamlparseexception-br
+
 ## Diagnostics
 
 Exception:
