@@ -1,5 +1,8 @@
 # WindowsDesktopBladeViewError
+
 Reproduction of error when using the BladeView control (Windows Community Toolkit ) and the UWP application uses TargetDeviceFamily="Desktop".
+
+To make the exception disappear, either remove the BladeView control from the MainPage.xaml file or change the TargetDeviceFamily back to Windows.Universal in the Package.appxmanifest file.
 
 ## Diagnostics
 
