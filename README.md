@@ -48,3 +48,28 @@ That error was fixed by removing the deployed application, which then oddly gave
 ```chsharp
 Exception thrown at 0x762EC762 (KernelBase.dll) in WindowsDesktopBladeViewError.exe: WinRT originate error - 0x80004005 : 'Cannot find a Resource with the Name/Key AppBarButtonBackground'. occurred
 ```
+
+## "Responsible" XAML
+
+```xaml
+<Page
+    x:Class="WindowsDesktopBladeViewError.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsDesktopBladeViewError"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!-- NOTE: remove use of this control to make the error disappear -->
+        <controls:BladeView>
+            <controls:BladeItem Header="Blade 1">
+            </controls:BladeItem>
+        </controls:BladeView>
+
+    </Grid>
+</Page>
+```
